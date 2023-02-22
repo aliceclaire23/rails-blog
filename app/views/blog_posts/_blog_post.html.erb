@@ -1,0 +1,17 @@
+<div id="<%= dom_id blog_post %>">
+  <p>
+    <strong>Title:</strong>
+    <%= blog_post.title %>
+  </p>
+  
+  <p>
+    <strong>Author:</strong>
+    <%= link_to(blog_post.author.name, blog_post.author) %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= blog_post.content %>
+  </p>
+
+</div>
