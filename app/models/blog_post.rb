@@ -4,6 +4,11 @@ class BlogPost < ApplicationRecord
 
   scope :published, -> { where("published_at < '#{Time.now}'") }
 
+  before_create :set_published_at
 
+  private
+
+  def set_published_at
+    self.published_at = Time.zone.now if published_at.blank?
   end
 end

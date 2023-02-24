@@ -30,7 +30,6 @@ class BlogPostsController < ApplicationController
 
     respond_to do |format|
       if @blog_post.save
-        @blog_post.update_attribute(:published_at, Time.now)
         format.html { redirect_to blog_post_url(@blog_post), notice: "Blog post was successfully created." }
         format.json { render :show, status: :created, location: @blog_post }
       else
@@ -44,7 +43,6 @@ class BlogPostsController < ApplicationController
   def update
     respond_to do |format|
       if @blog_post.update(blog_post_params)
-        @blog_post.update_attribute(:published_at, Time.now)
         format.html { redirect_to blog_post_url(@blog_post), notice: "Blog post was successfully updated." }
         format.json { render :show, status: :ok, location: @blog_post }
       else
