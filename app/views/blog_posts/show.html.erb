@@ -2,6 +2,9 @@
 
 <%= render @blog_post %>
 
+<%# TODO: amend this to a custom view partial %>
+<%= render @author %>
+
 <div>
   <%= link_to "Edit this blog post", edit_blog_post_path(@blog_post) %> |
   <%= link_to "Back to blog posts", blog_posts_path %>
