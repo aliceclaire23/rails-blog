@@ -5,10 +5,10 @@
   </p>
 
   <p>
-    Posted 
-    <%= blog_post.time_since_published %>
+    Posted
+    <%= blog_post.time_ago_in_words %>
   </p>
-  
+
   <p>
     <strong>Author:</strong>
     <%= link_to(blog_post.author.name, blog_post.author) %>
