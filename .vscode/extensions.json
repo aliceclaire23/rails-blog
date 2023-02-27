@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "codezombiech.gitignore",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv",
+    "misogi.ruby-rubocop",
+    "ninoseki.vscode-gem-lens",
+    "rebornix.ruby"
+  ]
+}

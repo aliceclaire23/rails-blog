@@ -1,0 +1,44 @@
+# https://docs.rubocop.org/rubocop/configuration.html
+require:
+  - "rubocop-rails"
+
+AllCops:
+  Include:
+    - "**/Gemfile"
+    - "**/Guardfile"
+    - "app/**/*.rb"
+    - "db/migrate/**/*.rb"
+    - "config/**/*.rb"
+    - "lib/**/*.rb"
+    - "spec/**/*.rb"
+    - "test/**/*.rb"
+  Exclude:
+    - "**/Rakefile"
+    - "**/config.ru"
+    - "bin/**/*"
+    - "lib/generators/**/templates/*"
+    - "log/**/*"
+    - "node_modules/**/*"
+    - "public/**/*"
+    - "storage/**/*"
+    - "test/fixtures/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+  NewCops: "enable"
+  RubyInterpreters:
+    - "ruby"
+  TargetRailsVersion: 7.0
+  TargetRubyVersion: 3.1
+  StyleGuideBaseURL: "https://rubystyle.guide"
+
+# Globally configured Cops
+# https://docs.rubocop.org/rubocop/cops.html
+Bundler/OrderedGems:
+  ConsiderPunctuation: true
+Style/Documentation:
+  Enabled: false
+
+# Rails Cops
+# https://docs.rubocop.org/rubocop-rails
+Rails:
+  Enabled: true
